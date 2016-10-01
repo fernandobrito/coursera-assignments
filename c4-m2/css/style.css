@@ -22,6 +22,13 @@ section {
   background-color: #aaa;
 }
 
+/* On small screens, increase margin on sides */
+@media (max-width: 767px) {
+  section {
+    margin: 30px;
+  }
+}
+
 section h2 {
   font-size: 1.25em;
   position: absolute;
