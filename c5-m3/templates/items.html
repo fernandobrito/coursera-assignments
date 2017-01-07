@@ -1,0 +1,7 @@
+<div>
+  <div ng-repeat="item in items" class='menu-item'>
+    <h3>{{ item.name }} <small>{{ item.short_name }}</small></h3>
+    <div class="description">{{ item.description }}</div>
+    <button ng-click="onRemove({index: $index});" class="btn btn-sm btn-danger" >Remove Item</button>
+  </div>
+</div>
