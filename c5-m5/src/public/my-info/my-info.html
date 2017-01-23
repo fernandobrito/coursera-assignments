@@ -1,0 +1,20 @@
+<div class="container col-sm-offset-3">
+  <h1>My Info</h1>
+
+  <div class="lead" ng-if="myInfoCtrl.notSignedUp()">Not Signed Up Yet. <a ui-sref="public.signup">Sign up Now</a>!</div>
+
+  <div ng-if="myInfoCtrl.user">
+    <div class="lead">Welcome back, {{ myInfoCtrl.user.firstName }}! Here is your registered data:</div>
+
+    <ul ng-if="myInfoCtrl.user">
+      <li><strong>Full Name:</strong> {{ myInfoCtrl.user.firstName }} {{ myInfoCtrl.user.lastName }}</li>
+      <li><strong>Email</strong> {{ myInfoCtrl.user.email }}</li>
+      <li><strong>Phone Number</strong> {{ myInfoCtrl.user.phoneNumber }}</li>
+    </ul>
+
+    <div>And we have not forgotten about your favorite menu item!</div>
+    <h2>{{ myInfoCtrl.item.name }} <small>{{ myInfoCtrl.item.short_name }}</small></h2>
+    <img ng-src="https://pacific-citadel-76281.herokuapp.com/images/{{myInfoCtrl.item.short_name}}.jpg"></img>
+  </div>
+
+</div>
